@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/styled-components": "^5.1.0",
     "@typescript-eslint/eslint-plugin": "2.x",
     "@typescript-eslint/parser": "2.x",
     "babel-eslint": "10.x",
