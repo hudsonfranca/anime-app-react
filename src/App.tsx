@@ -4,11 +4,11 @@ import { ResetStyle, GlobalStyle } from './components/GlobalStyle/globalStyle';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <>
       <ResetStyle />
       <GlobalStyle />
       <Layout />
-    </div>
+    </>
   );
 };
 
