@@ -1,0 +1,501 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navbar/> redering Should render without errors 1`] = `
+.c13 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.c11 {
+  width: 100%;
+  grid-area: ic;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.c9 {
+  grid-area: menu;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--white);
+}
+
+.c9 li {
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.c9 li:hover,
+.c9 li:active {
+  color: var(--hover1);
+}
+
+.c16 {
+  grid-area: ll;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--white);
+}
+
+.c16 li {
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.c16 li:hover,
+.c16 li:active {
+  color: var(--hover1);
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  grid-area: hb;
+}
+
+.c5 {
+  grid-area: logo;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.c7 {
+  grid-area: logo;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.c19 {
+  color: var(--white);
+  width: 45px;
+  height: 45px;
+}
+
+.c18 {
+  grid-area: searchButton;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.c0 {
+  grid-area: navbar;
+  background-color: var(--primary);
+  width: 100%;
+  height: 60px;
+  font-size: 2rem;
+  display: grid;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+}
+
+.c0::after {
+  content: '';
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  top: 60px;
+  background-image: linear-gradient(to right,var(--hover1),var(--hover2));
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c12 button {
+  height: 35px;
+  width: 40px;
+  background-color: var(--white);
+  border-radius: 5px;
+  border-top-left-radius: unset;
+  border-bottom-left-radius: unset;
+}
+
+.c12 button:focus {
+  outline: none !important;
+  border: 1px solid var(--hover1);
+  box-shadow: 0 0 7px var(--hover1);
+}
+
+.c12 input {
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-top-right-radius: unset;
+  border-bottom-right-radius: unset;
+  font-size: 2rem;
+  background-color: var(--white);
+}
+
+.c12 input:focus {
+  outline: none !important;
+  border: 1px solid var(--hover1);
+  box-shadow: 0 0 7px var(--hover1);
+}
+
+.c14 {
+  width: 30px;
+  height: 30px;
+  color: var(--tertiary);
+}
+
+.c3 {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.c3 div {
+  width: 100%;
+  height: 3px;
+  background-color: var(--white);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-transform-origin: 1px;
+  -ms-transform-origin: 1px;
+  transform-origin: 1px;
+  border-radius: 10px;
+}
+
+.c3 div:first-child {
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
+
+.c3 div:nth-child(2) {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.c3 div:nth-child(3) {
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
+
+@media (min-width:1000px) {
+  .c0 {
+    grid-template-areas: 'logo menu ic ll';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .c0 .c10,
+  .c0 .c8,
+  .c0 .c15 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .c0 .c17,
+  .c0 .c1 {
+    display: none;
+  }
+}
+
+@media (max-width:999px) {
+  .c0 {
+    grid-template-areas: 'hb logo searchButton';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .c0 .c10,
+  .c0 .c8,
+  .c0 .c15 {
+    display: none;
+  }
+}
+
+@media (min-width:425px) {
+  .c0 .c6 {
+    display: none;
+  }
+
+  .c0 .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width:424px) {
+  .c0 .c4 {
+    display: none;
+  }
+}
+
+<div
+  className="c0"
+  data-test="container"
+>
+  <div
+    className="c1 c2"
+    data-test="hamburguer-button"
+  >
+    <div
+      className="c3"
+      data-test="container"
+      onClick={[Function]}
+      open={false}
+    >
+      <div
+        data-test="hamburguerLine"
+      />
+      <div
+        data-test="hamburguerLine"
+      />
+      <div
+        data-test="hamburguerLine"
+      />
+    </div>
+  </div>
+  <div
+    className="c4 c5"
+    data-test="logo"
+  >
+    <img
+      alt="Logo"
+      src="Logo2.png"
+    />
+  </div>
+  <div
+    className="c6 c7"
+    data-test="logo-icon"
+  >
+    <img
+      alt="Logo"
+      src="LogoIcon.png"
+    />
+  </div>
+  <ul
+    className="c8 c9"
+    data-test="menu"
+  >
+    <li>
+      Home
+    </li>
+    <li>
+      animes
+    </li>
+    <li>
+      Genres
+    </li>
+  </ul>
+  <div
+    className="c10 c11"
+    data-test="search-input"
+  >
+    <div
+      className="c12"
+    >
+      <input
+        onChange={[Function]}
+        placeholder="Search animes"
+        type="text"
+        value=""
+      />
+      <button
+        type="submit"
+      >
+        <svg
+          aria-hidden="true"
+          className="c13 c14"
+          fill="currentColor"
+          focusable="false"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 18a7.952 7.952 0 004.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0018 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
+          />
+          <path
+            d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 00-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <ul
+    className="c15 c16"
+    data-test="login-logout"
+  >
+    <li>
+      Login
+    </li>
+    <li>
+      Logout
+    </li>
+  </ul>
+  <button
+    className="c17 c18"
+    data-test="search-button"
+  >
+    <svg
+      aria-hidden="true"
+      className="c13 c19"
+      fill="currentColor"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10 18a7.952 7.952 0 004.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0018 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
+      />
+      <path
+        d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 00-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"
+      />
+    </svg>
+  </button>
+</div>
+`;

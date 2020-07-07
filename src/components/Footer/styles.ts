@@ -48,6 +48,12 @@ export const Container = styled.div`
     clip-path: polygon(100% 100%, 74% 0, 51% 100%, 27% 0, 0 100%);
     z-index: -1;
   }
+
+  @media (max-width: 736px) {
+    ul {
+      flex-direction: column;
+    }
+  }
 `;
 
 export const FacebookComponent = styled(Facebook)`

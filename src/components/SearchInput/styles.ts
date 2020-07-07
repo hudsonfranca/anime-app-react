@@ -22,7 +22,7 @@ export const Container = styled.div`
   }
 
   input {
-    width: 350px;
+    width: 100%;
     height: 35px;
     border-radius: 5px;
     border: none;
@@ -40,7 +40,7 @@ export const Container = styled.div`
   }
 `;
 
-export const SearchComponent = styled(SearchAlt)`
+export const SearchIcon = styled(SearchAlt)`
   width: 30px;
   height: 30px;
   color: var(--tertiary);

@@ -1,31 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { Container } from './styles';
+import {
+  Container,
+  InpuContainer,
+  LogoContainer,
+  Menu,
+  HamburguerContainer,
+  LoginLogout,
+  SearchButton,
+  LogoIconContainer,
+  SearchButtonContainer,
+} from './styles';
+import LogoIcon from '../../assets/LogoIcon.png';
 import Logo from '../../assets/Logo2.png';
 import { SearchInput } from '../SearchInput';
+import { HamburguerButton } from '../HamburguerButton';
 
 const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <Container>
-      <div>
-        <ul>
-          <li>
-            <img src={Logo} alt="Logo" />
-          </li>
-          <li>Home</li>
-          <li>animes</li>
-          <li>Genres</li>
-        </ul>
-      </div>
-      <div>
+    <Container data-test="container">
+      <HamburguerContainer data-test="hamburguer-button">
+        <HamburguerButton open={isOpen} onClick={() => setIsOpen(!isOpen)} />
+      </HamburguerContainer>
+
+      <LogoContainer data-test="logo">
+        <img src={Logo} alt="Logo" />
+      </LogoContainer>
+
+      <LogoIconContainer data-test="logo-icon">
+        <img src={LogoIcon} alt="Logo" />
+      </LogoIconContainer>
+
+      <Menu data-test="menu">
+        <li>Home</li>
+        <li>animes</li>
+        <li>Genres</li>
+      </Menu>
+
+      <InpuContainer data-test="search-input">
         <SearchInput />
-      </div>
-      <div>
-        <ul>
-          <li>Login</li>
-          <li>logout</li>
-        </ul>
-      </div>
+      </InpuContainer>
+
+      <LoginLogout data-test="login-logout">
+        <li>Login</li>
+        <li>Logout</li>
+      </LoginLogout>
+
+      <SearchButtonContainer data-test="search-button">
+        <SearchButton />
+      </SearchButtonContainer>
     </Container>
   );
 };

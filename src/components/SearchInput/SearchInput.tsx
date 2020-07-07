@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Container, SearchComponent } from './styles';
+import React, { useState } from 'react';
+import { Container, SearchIcon } from './styles';
 
 const SearchInput: React.FC = () => {
   const [value, setValue] = useState('');
@@ -18,7 +17,7 @@ const SearchInput: React.FC = () => {
         onChange={(e) => onChangeHandler(e)}
       />
       <button type="submit">
-        <SearchComponent />
+        <SearchIcon />
       </button>
     </Container>
   );
