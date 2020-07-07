@@ -15,9 +15,10 @@ import LogoIcon from '../../assets/LogoIcon.png';
 import Logo from '../../assets/Logo2.png';
 import { SearchInput } from '../SearchInput';
 import { HamburguerButton } from '../HamburguerButton';
+import { useSideDrawer } from '../context/SideDrawerContext';
 
 const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, setIsOpen } = useSideDrawer();
   return (
     <Container data-test="container">
       <HamburguerContainer data-test="hamburguer-button">

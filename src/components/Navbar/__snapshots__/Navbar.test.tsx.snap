@@ -387,7 +387,6 @@ exports[`<Navbar/> redering Should render without errors 1`] = `
       className="c3"
       data-test="container"
       onClick={[Function]}
-      open={false}
     >
       <div
         data-test="hamburguerLine"
