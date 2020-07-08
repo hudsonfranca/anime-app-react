@@ -8,8 +8,12 @@ const SearchInput: React.FC = () => {
     setValue(e.target.value);
   }
 
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  };
+
   return (
-    <Container>
+    <Container onSubmit={(e) => handleSubmit(e)}>
       <input
         type="text"
         value={value}

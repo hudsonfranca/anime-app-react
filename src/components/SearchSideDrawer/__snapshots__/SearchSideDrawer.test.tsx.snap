@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchSideDrawer/> redering Should render without errors 1`] = `
+.c6 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.c0 {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--primary);
+  -webkit-transition: 0.8s ease-in-out;
+  transition: 0.8s ease-in-out;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 30px;
+  -webkit-transform: translate3d(-100%,0,0);
+  -ms-transform: translate3d(-100%,0,0);
+  transform: translate3d(-100%,0,0);
+}
+
+.c2 {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  font-size: 2rem;
+  background-color: var(--white);
+}
+
+.c2:focus {
+  outline: none !important;
+  border: 1px solid var(--hover1);
+  box-shadow: 0 0 7px var(--hover1);
+}
+
+.c5 {
+  border-radius: 10px;
+}
+
+.c5:hover,
+.c5:active {
+  background-image: linear-gradient(45deg,var(--hover1),var(--hover2));
+}
+
+.c4 {
+  font-size: 2rem;
+  color: var(--white);
+  padding: 15px;
+}
+
+.c4:hover,
+.c4:active {
+  background-image: linear-gradient(45deg,var(--hover1),var(--hover2));
+}
+
+.c1 {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.c7 {
+  color: var(--white);
+  width: 50px;
+  height: 50px;
+}
+
+@media (min-width:1000px) {
+  .c0 {
+    display: none;
+  }
+}
+
+<form
+  className="c0"
+  data-test="container"
+  onSubmit={[Function]}
+>
+  <div
+    className="c1"
+    data-test="search-input-container"
+  >
+    <input
+      className="c2"
+      data-test="search-input"
+    />
+  </div>
+  <div
+    className="c3"
+    data-test="buttons-container"
+  >
+    <button
+      className="c4"
+      data-test="button-cancel"
+      onClick={[Function]}
+      type="button"
+    >
+      CANCEL
+    </button>
+    <button
+      className="c5"
+      data-test="button-submit"
+    >
+      <svg
+        aria-hidden="true"
+        className="c6 c7"
+        data-test="search-button"
+        fill="currentColor"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 18a7.952 7.952 0 004.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0018 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
+        />
+        <path
+          d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 00-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"
+        />
+      </svg>
+    </button>
+  </div>
+</form>
+`;

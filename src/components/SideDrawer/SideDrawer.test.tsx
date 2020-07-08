@@ -4,17 +4,10 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import { shallow, ShallowWrapper } from 'enzyme';
 
-function createTestProps() {
-  return {
-    isOpen: false,
-  };
-}
-
 let wraper: ShallowWrapper;
 
 beforeEach(() => {
-  const props = createTestProps();
-  wraper = shallow(<SideDrawer {...props} />);
+  wraper = shallow(<SideDrawer />);
 });
 
 afterEach(() => {
@@ -23,8 +16,7 @@ afterEach(() => {
 
 describe('<SideDrawer/> redering', () => {
   it('Should render without errors', () => {
-    const props = createTestProps();
-    const wrapper = renderer.create(<SideDrawer {...props} />).toJSON();
+    const wrapper = renderer.create(<SideDrawer />).toJSON();
 
     expect(wrapper).toMatchSnapshot();
   });

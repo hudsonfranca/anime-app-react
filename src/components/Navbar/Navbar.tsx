@@ -16,9 +16,12 @@ import Logo from '../../assets/Logo2.png';
 import { SearchInput } from '../SearchInput';
 import { HamburguerButton } from '../HamburguerButton';
 import { useSideDrawer } from '../context/SideDrawerContext';
+import { useSearchSideDrawer } from '../context/SearchSideDrawerContext';
 
 const Navbar: React.FC = () => {
   const { isOpen, setIsOpen } = useSideDrawer();
+  const { searchIsOpen, setSearchIsOpen } = useSearchSideDrawer();
+
   return (
     <Container data-test="container">
       <HamburguerContainer data-test="hamburguer-button">
@@ -48,7 +51,10 @@ const Navbar: React.FC = () => {
         <li>Logout</li>
       </LoginLogout>
 
-      <SearchButtonContainer data-test="search-button">
+      <SearchButtonContainer
+        data-test="search-button"
+        onClick={() => setSearchIsOpen(!searchIsOpen)}
+      >
         <SearchButton />
       </SearchButtonContainer>
     </Container>

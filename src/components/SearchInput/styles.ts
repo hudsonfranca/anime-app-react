@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { SearchAlt } from '@styled-icons/boxicons-regular';
 
-export const Container = styled.div`
+export const Container = styled.form`
   display: flex;
 
   justify-content: space-between;

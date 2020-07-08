@@ -53,7 +53,7 @@ export const LogoContainer = styled.div`
   ${baseAlign}
 `;
 
-export const LogoIconContainer = styled.div`
+export const LogoIconContainer = styled.button`
   grid-area: logo;
   ${baseAlign}
 `;
