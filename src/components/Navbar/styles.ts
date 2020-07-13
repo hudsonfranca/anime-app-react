@@ -19,6 +19,9 @@ export const Menu = styled.ul`
   grid-area: menu;
   ${baseAlign}
   color: var(--white);
+  a {
+    color: var(--white);
+  }
   li {
     cursor: pointer;
     transition: 0.4s;
@@ -33,6 +36,9 @@ export const LoginLogout = styled.ul`
   grid-area: ll;
   ${baseAlign}
   color: var(--white);
+  a {
+    color: var(--white);
+  }
   li {
     cursor: pointer;
     transition: 0.4s;
@@ -79,6 +85,7 @@ export const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   position: fixed;
+  z-index:20;
   ::after {
     content: '';
     width: 100%;
@@ -90,7 +97,7 @@ export const Container = styled.div`
 
   @media (min-width: 1000px) {
     grid-template-areas:'logo menu ic ll';
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
     grid-template-rows:1fr;
     
    ${InpuContainer},${Menu},${LoginLogout}{

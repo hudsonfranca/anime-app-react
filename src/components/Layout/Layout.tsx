@@ -1,4 +1,6 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from '../../Routes';
 
 import { Grid } from './styles';
 import { Navbar } from '../Navbar';
@@ -12,26 +14,23 @@ import SearchSideDrawerProvider from '../context/SearchSideDrawerContext';
 
 const Layout: React.FC = () => {
   return (
-    <Grid>
-      <SideDrawerProvider>
-        <SearchSideDrawerProvider>
-          <Navbar />
-          <SideDrawer />
-          <SearchSideDrawer />
-        </SearchSideDrawerProvider>
-      </SideDrawerProvider>
+    <BrowserRouter>
+      <Grid>
+        <SideDrawerProvider>
+          <SearchSideDrawerProvider>
+            <Navbar />
+            <SideDrawer />
+            <SearchSideDrawer />
+          </SearchSideDrawerProvider>
+        </SideDrawerProvider>
 
-      <Main>
-        <div style={{ width: '90%', height: '200px' }}></div>
-        <div style={{ width: '90%', height: '200px' }}></div>
-        <div style={{ width: '90%', height: '200px' }}></div>
-        <div style={{ width: '90%', height: '200px' }}></div>
-        <div style={{ width: '90%', height: '200px' }}></div>
-        <div style={{ width: '90%', height: '200px' }}></div>
-      </Main>
-      <Sidebar />
-      <Footer />
-    </Grid>
+        <Main>
+          <Routes />
+        </Main>
+        <Sidebar />
+        <Footer />
+      </Grid>
+    </BrowserRouter>
   );
 };
 

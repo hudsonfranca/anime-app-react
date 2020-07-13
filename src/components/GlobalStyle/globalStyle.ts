@@ -33,6 +33,8 @@ html {
 }
 body {
     line-height: 1;
+    width:100%;
+   
 }
 ol, ul {
   list-style: none;
@@ -81,6 +83,7 @@ button {
     --senary: #828386;
 
     --white: #fff;
+    --black: rgb(0, 0, 0);
     --gray: #8a8c90;
     --chat-input: rgb(64,68,75);
     --symbol: #74777a;
@@ -102,7 +105,14 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; 
   font-family: 'Roboto', Helvetica, Arial, 'Lucida Grande', sans-serif;
+ 
 }
+
+html,body,#root{
+  width: 100%;
+  height: 100%;
+}
+
 
  
 `;

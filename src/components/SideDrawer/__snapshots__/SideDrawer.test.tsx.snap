@@ -170,6 +170,12 @@ exports[`<SideDrawer/> redering Should render without errors 1`] = `
       Genres
     </li>
     <li>
+      My list
+    </li>
+    <li>
+      History
+    </li>
+    <li>
       Login
     </li>
     <li>

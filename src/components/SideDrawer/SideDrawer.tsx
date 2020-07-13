@@ -18,6 +18,8 @@ const SideDrawer: React.FC = () => {
         <li>Home</li>
         <li>animes</li>
         <li>Genres</li>
+        <li>My list</li>
+        <li>History</li>
         <li>Login</li>
         <li>Logout</li>
       </ul>

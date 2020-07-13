@@ -201,6 +201,7 @@ exports[`<Navbar/> redering Should render without errors 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: fixed;
+  z-index: 20;
 }
 
 .c0::after {
@@ -323,7 +324,7 @@ exports[`<Navbar/> redering Should render without errors 1`] = `
 @media (min-width:1000px) {
   .c0 {
     grid-template-areas: 'logo menu ic ll';
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
     grid-template-rows: 1fr;
   }
 
@@ -429,6 +430,12 @@ exports[`<Navbar/> redering Should render without errors 1`] = `
     </li>
     <li>
       Genres
+    </li>
+    <li>
+      My list
+    </li>
+    <li>
+      History
     </li>
   </ul>
   <div

@@ -17,6 +17,7 @@ import { SearchInput } from '../SearchInput';
 import { HamburguerButton } from '../HamburguerButton';
 import { useSideDrawer } from '../context/SideDrawerContext';
 import { useSearchSideDrawer } from '../context/SearchSideDrawerContext';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const { isOpen, setIsOpen } = useSideDrawer();
@@ -37,9 +38,14 @@ const Navbar: React.FC = () => {
       </LogoIconContainer>
 
       <Menu data-test="menu">
-        <li>Home</li>
+        <Link to="/">
+          <li>Home</li>
+        </Link>
+
         <li>animes</li>
         <li>Genres</li>
+        <li>My list</li>
+        <li>History</li>
       </Menu>
 
       <InpuContainer data-test="search-input">
@@ -47,7 +53,10 @@ const Navbar: React.FC = () => {
       </InpuContainer>
 
       <LoginLogout data-test="login-logout">
-        <li>Login</li>
+        <Link to="/login">
+          <li>Login</li>
+        </Link>
+
         <li>Logout</li>
       </LoginLogout>
 
