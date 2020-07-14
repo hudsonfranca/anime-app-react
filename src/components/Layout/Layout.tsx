@@ -11,24 +11,27 @@ import { SideDrawer } from '../SideDrawer';
 import { SearchSideDrawer } from '../SearchSideDrawer';
 import SideDrawerProvider from '../context/SideDrawerContext';
 import SearchSideDrawerProvider from '../context/SearchSideDrawerContext';
+import LoginContextProvider from '../../pages/context/LoginContext';
 
 const Layout: React.FC = () => {
   return (
     <BrowserRouter>
       <Grid>
-        <SideDrawerProvider>
-          <SearchSideDrawerProvider>
-            <Navbar />
-            <SideDrawer />
-            <SearchSideDrawer />
-          </SearchSideDrawerProvider>
-        </SideDrawerProvider>
+        <LoginContextProvider>
+          <SideDrawerProvider>
+            <SearchSideDrawerProvider>
+              <Navbar />
+              <SideDrawer />
+              <SearchSideDrawer />
+            </SearchSideDrawerProvider>
+          </SideDrawerProvider>
 
-        <Main>
-          <Routes />
-        </Main>
-        <Sidebar />
-        <Footer />
+          <Main>
+            <Routes />
+          </Main>
+          <Sidebar />
+          <Footer />
+        </LoginContextProvider>
       </Grid>
     </BrowserRouter>
   );

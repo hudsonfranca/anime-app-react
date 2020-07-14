@@ -137,3 +137,17 @@ export const Container = styled.div`
   }
 
 `;
+
+export const Button = styled.button`
+  width: 80%;
+  height: 40px;
+  color: var(--white);
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+  :hover,
+  :active {
+    color: var(--hover1);
+  }
+`;

@@ -13,14 +13,18 @@ const SearchInput: React.FC = () => {
   };
 
   return (
-    <Container onSubmit={(e) => handleSubmit(e)}>
+    <Container
+      onSubmit={(e) => handleSubmit(e)}
+      data-test="search-input-container"
+    >
       <input
         type="text"
         value={value}
         placeholder="Search animes"
         onChange={(e) => onChangeHandler(e)}
+        data-test="input"
       />
-      <button type="submit">
+      <button type="submit" data-test="submit-button">
         <SearchIcon />
       </button>
     </Container>

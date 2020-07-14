@@ -10,6 +10,7 @@ import {
   SearchButton,
   LogoIconContainer,
   SearchButtonContainer,
+  Button,
 } from './styles';
 import LogoIcon from '../../assets/LogoIcon.png';
 import Logo from '../../assets/Logo2.png';
@@ -18,13 +19,14 @@ import { HamburguerButton } from '../HamburguerButton';
 import { useSideDrawer } from '../context/SideDrawerContext';
 import { useSearchSideDrawer } from '../context/SearchSideDrawerContext';
 import { Link } from 'react-router-dom';
+import { useLogin } from '../../pages/context/LoginContext';
 
 const Navbar: React.FC = () => {
   const { isOpen, setIsOpen } = useSideDrawer();
   const { searchIsOpen, setSearchIsOpen } = useSearchSideDrawer();
-
+  const { isAuthenticated, setToken, setIsAuthenticated } = useLogin();
   return (
-    <Container data-test="container">
+    <Container data-test="containerNavbar">
       <HamburguerContainer data-test="hamburguer-button">
         <HamburguerButton open={isOpen} onClick={() => setIsOpen(!isOpen)} />
       </HamburguerContainer>
@@ -33,7 +35,7 @@ const Navbar: React.FC = () => {
         <img src={Logo} alt="Logo" />
       </LogoContainer>
 
-      <LogoIconContainer data-test="logo-icon">
+      <LogoIconContainer data-test="logoIcon">
         <img src={LogoIcon} alt="Logo" />
       </LogoIconContainer>
 
@@ -53,11 +55,22 @@ const Navbar: React.FC = () => {
       </InpuContainer>
 
       <LoginLogout data-test="login-logout">
-        <Link to="/login">
-          <li>Login</li>
-        </Link>
-
-        <li>Logout</li>
+        {isAuthenticated ? (
+          <li>
+            <Button
+              onClick={() => {
+                setToken('');
+                setIsAuthenticated(false);
+              }}
+            >
+              Logout
+            </Button>
+          </li>
+        ) : (
+          <Link to="/login">
+            <li>Sign In</li>
+          </Link>
+        )}
       </LoginLogout>
 
       <SearchButtonContainer
