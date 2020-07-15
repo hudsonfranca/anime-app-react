@@ -21,22 +21,13 @@ export const Container = styled.div`
 
 export const Form = styled.form`
   width: 330px;
-  height: 350px;
+  height: 380px;
   background-color: var(--primary);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
-  strong a {
-    color: var(--hover1);
-
-    :hover,
-    :active {
-      text-decoration: underline;
-    }
-  }
 `;
 
 export const Input = styled.input<InputProps>`

@@ -37,7 +37,7 @@ export const Title = styled.p`
   align-items: center;
 `;
 
-export const Pagi = styled.div`
+export const PaginationContainer = styled.div`
   width: 100%;
   height: 70px;
   display: flex;

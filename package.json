@@ -18,6 +18,7 @@
     "rc-pagination": "^2.4.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-loader-spinner": "^3.1.14",
     "react-notifications-component": "^2.4.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
@@ -45,6 +46,7 @@
   },
   "devDependencies": {
     "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/react-loader-spinner": "^3.1.0",
     "@types/react-notifications-component": "^2.4.0",
     "@types/react-router-dom": "^5.1.5",
     "@types/react-test-renderer": "^16.9.2",

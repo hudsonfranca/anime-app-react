@@ -12,6 +12,7 @@ import { SearchSideDrawer } from '../SearchSideDrawer';
 import SideDrawerProvider from '../context/SideDrawerContext';
 import SearchSideDrawerProvider from '../context/SearchSideDrawerContext';
 import LoginContextProvider from '../../pages/context/LoginContext';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 const Layout: React.FC = () => {
   return (

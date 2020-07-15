@@ -1,8 +1,6 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 interface Props {
-  token: string;
-  setToken: React.Dispatch<React.SetStateAction<string>>;
   isAuthenticated: boolean;
   setIsAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -10,13 +8,17 @@ interface Props {
 const LoginContext = createContext({} as Props);
 
 const LoginProvider: React.FC = ({ children }) => {
-  const [token, setToken] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+  useEffect(() => {
+    const auth = localStorage.getItem('authentication');
+    if (auth) {
+      setIsAuthenticated(true);
+    }
+  }, []);
+
   return (
-    <LoginContext.Provider
-      value={{ isAuthenticated, setIsAuthenticated, setToken, token }}
-    >
+    <LoginContext.Provider value={{ isAuthenticated, setIsAuthenticated }}>
       {children}
     </LoginContext.Provider>
   );
@@ -28,9 +30,9 @@ export function useLogin() {
     throw new Error('useLogin must be used within a SideDrawerProvider');
   }
 
-  const { isAuthenticated, setIsAuthenticated, setToken, token } = context;
+  const { isAuthenticated, setIsAuthenticated } = context;
 
-  return { isAuthenticated, setIsAuthenticated, setToken, token };
+  return { isAuthenticated, setIsAuthenticated };
 }
 
 export default LoginProvider;

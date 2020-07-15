@@ -15,14 +15,22 @@ import { Formik, FormikHelpers } from 'formik';
 import * as Yup from 'yup';
 import { RouteComponentProps } from 'react-router-dom';
 import { useLogin } from '../context/LoginContext';
-import { Link } from 'react-router-dom';
 import Loader from 'react-loader-spinner';
+import { useHistory } from 'react-router-dom';
 
 const SignupSchema = Yup.object().shape({
   password: Yup.string()
     .min(7, 'Too Short!')
     .max(70, 'Too Long!')
     .required('Password is a require field'),
+  confirmPassword: Yup.string()
+    .required()
+    .min(7, 'Too Short!')
+    .max(70, 'Too Long!')
+    .required('Confirm password is a require field')
+    .test('passwords-match', 'Passwords must match', function (value) {
+      return this.parent.password === value;
+    }),
   email: Yup.string()
     .email('Invalid email')
     .required('Email is a require field'),
@@ -30,32 +38,37 @@ const SignupSchema = Yup.object().shape({
 
 type Props = RouteComponentProps<any>;
 
-const Login: React.FC<Props> = ({ history }) => {
+const CreateAccount: React.FC<Props> = () => {
   const { setIsAuthenticated } = useLogin();
+  const history = useHistory();
   async function handleFormikSubmit(
     values: {
       password: string;
       email: string;
+      confirmPassword: string;
     },
     formikHelpers: FormikHelpers<{
       password: string;
       email: string;
+      confirmPassword: string;
     }>
   ) {
     try {
-      const { data } = await api.post('/users/login', {
+      const response = await api.post('/user', {
         password: values.password,
         email: values.email,
       });
-      if (data.accessToken) {
-        localStorage.setItem('authentication', data.accessToken);
+
+      if (response.data.accessToken) {
+        localStorage.setItem('authentication', response.data.accessToken);
+
         setIsAuthenticated(true);
         history.push('/');
       }
     } catch (error) {
       store.addNotification({
         title: 'Error',
-        message: 'Wrong username or password! ',
+        message: `${error.response.data.error}`,
         type: 'danger',
         insert: 'top',
         container: 'top-right',
@@ -72,7 +85,7 @@ const Login: React.FC<Props> = ({ history }) => {
   return (
     <Container>
       <Formik
-        initialValues={{ password: '', email: '' }}
+        initialValues={{ password: '', email: '', confirmPassword: '' }}
         validationSchema={SignupSchema}
         onSubmit={handleFormikSubmit}
       >
@@ -85,7 +98,7 @@ const Login: React.FC<Props> = ({ history }) => {
           isSubmitting,
         }) => (
           <Form onSubmit={handleSubmit}>
-            <Title>Sign In to Animes BR</Title>
+            <Title>Create an Account</Title>
             <Label>
               <Input
                 name="email"
@@ -110,6 +123,22 @@ const Login: React.FC<Props> = ({ history }) => {
                 <Text error={errors.password}>{errors.password}</Text>
               )}
             </Label>
+            <Label>
+              <Input
+                name="confirmPassword"
+                onChange={handleChange}
+                value={values.confirmPassword}
+                type="password"
+                error={errors.confirmPassword}
+                placeholder="Confirm Password"
+              />
+              {errors.confirmPassword && (
+                <Text error={errors.confirmPassword}>
+                  {errors.confirmPassword}
+                </Text>
+              )}
+            </Label>
+
             {isSubmitting ? (
               <Loader
                 type="Bars"
@@ -118,13 +147,8 @@ const Login: React.FC<Props> = ({ history }) => {
                 width={40}
               />
             ) : (
-              <ButtonSubmit type="submit">Sign In</ButtonSubmit>
+              <ButtonSubmit type="submit">Create an account</ButtonSubmit>
             )}
-
-            <strong>
-              Don&apos;t have an account?
-              <Link to="/create-account"> Create one</Link>
-            </strong>
           </Form>
         )}
       </Formik>
@@ -132,4 +156,4 @@ const Login: React.FC<Props> = ({ history }) => {
   );
 };
 
-export default Login;
+export default CreateAccount;

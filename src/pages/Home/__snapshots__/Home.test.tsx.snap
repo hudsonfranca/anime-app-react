@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home/> redering Should render without errors 1`] = `
+.c2 {
+  width: 100%;
+  height: 100%;
+  background-color: var(--tertiary);
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(215px,1fr));
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-gap: 20px;
+  padding: 10px;
+}
+
+.c0 {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--tertiary);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 2fr auto;
+  grid-gap: 20px;
+  padding: 10px;
+  border-right: 1px solid var(--primary);
+}
+
+.c1 {
+  width: 100%;
+  height: 70px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  padding: 2px;
+  font-size: 2rem;
+  color: var(--white);
+  border-bottom: 1px solid var(--primary);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  width: 100%;
+  height: 70px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+  data-test="home-container"
+>
+  <p
+    className="c1"
+  >
+    Latest episodes
+  </p>
+  <div
+    className="c2"
+    data-test="latest-episodes"
+  />
+  <div
+    className="c3"
+    data-test="pagination-container"
+  >
+    <ul
+      className="rc-pagination"
+      style={
+        Object {
+          "marginBottom": "2rem",
+        }
+      }
+      unselectable="unselectable"
+    >
+      <li
+        aria-disabled={true}
+        className="rc-pagination-prev rc-pagination-disabled"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex={null}
+        title="Previous page"
+      >
+        <i
+          className="custom-icon-prev"
+          disabled={true}
+          style={
+            Object {
+              "fontSize": "16px",
+            }
+          }
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            style={
+              Object {
+                "transform": "rotate(180deg)",
+                "verticalAlign": "-.125em",
+              }
+            }
+            viewBox="0 0 1024 1024"
+            width="1em"
+          >
+            <path
+              d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-0.7 5.2-2L869 536.2c14.7-12.8 14.7-35.6 0-48.4z"
+            />
+          </svg>
+        </i>
+      </li>
+      <li
+        className="rc-pagination-item rc-pagination-item-0 rc-pagination-disabled rc-pagination-item-disabled"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+        title={0}
+      >
+        <a>
+          0
+        </a>
+      </li>
+      <li
+        aria-disabled={true}
+        className="rc-pagination-next rc-pagination-disabled"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex={null}
+        title="Next page"
+      >
+        <i
+          className="custom-icon-next"
+          disabled={true}
+          style={
+            Object {
+              "fontSize": "16px",
+            }
+          }
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            style={
+              Object {
+                "transform": "rotate(0deg)",
+                "verticalAlign": "-.125em",
+              }
+            }
+            viewBox="0 0 1024 1024"
+            width="1em"
+          >
+            <path
+              d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-0.7 5.2-2L869 536.2c14.7-12.8 14.7-35.6 0-48.4z"
+            />
+          </svg>
+        </i>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

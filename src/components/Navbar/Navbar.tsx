@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import {
   Container,
@@ -24,7 +24,8 @@ import { useLogin } from '../../pages/context/LoginContext';
 const Navbar: React.FC = () => {
   const { isOpen, setIsOpen } = useSideDrawer();
   const { searchIsOpen, setSearchIsOpen } = useSearchSideDrawer();
-  const { isAuthenticated, setToken, setIsAuthenticated } = useLogin();
+  const { isAuthenticated, setIsAuthenticated } = useLogin();
+
   return (
     <Container data-test="containerNavbar">
       <HamburguerContainer data-test="hamburguer-button">
@@ -59,7 +60,7 @@ const Navbar: React.FC = () => {
           <li>
             <Button
               onClick={() => {
-                setToken('');
+                localStorage.removeItem('authentication');
                 setIsAuthenticated(false);
               }}
             >

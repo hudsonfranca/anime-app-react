@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
-import { Container, LatestEpisodes, Title, Pagi } from './styles';
+import {
+  Container,
+  LatestEpisodes,
+  Title,
+  PaginationContainer,
+} from './styles';
 import { Card } from '../../components/Card';
 import { Pagination } from '../../components/Pagination';
 
@@ -59,42 +64,10 @@ const Home: React.FC = () => {
   };
 
   return (
-    <Container>
+    <Container data-test="home-container">
       <Title>Latest episodes</Title>
 
-      <LatestEpisodes>
-        {episodes &&
-          episodes.map((episode) => (
-            <Card
-              episodeTitle={episode.name}
-              imgBackground={episode.thumbnail.url}
-              key={episode.id}
-            />
-          ))}
-        {episodes &&
-          episodes.map((episode) => (
-            <Card
-              episodeTitle={episode.name}
-              imgBackground={episode.thumbnail.url}
-              key={episode.id}
-            />
-          ))}
-        {episodes &&
-          episodes.map((episode) => (
-            <Card
-              episodeTitle={episode.name}
-              imgBackground={episode.thumbnail.url}
-              key={episode.id}
-            />
-          ))}
-        {episodes &&
-          episodes.map((episode) => (
-            <Card
-              episodeTitle={episode.name}
-              imgBackground={episode.thumbnail.url}
-              key={episode.id}
-            />
-          ))}
+      <LatestEpisodes data-test="latest-episodes">
         {episodes &&
           episodes.map((episode) => (
             <Card
@@ -104,14 +77,15 @@ const Home: React.FC = () => {
             />
           ))}
       </LatestEpisodes>
-      <Pagi>
+      <PaginationContainer data-test="pagination-container">
         <Pagination
+          data-test="pagination"
           current={current}
           onChange={onChange}
           total={count}
           pageSize={take}
         />
-      </Pagi>
+      </PaginationContainer>
     </Container>
   );
 };
