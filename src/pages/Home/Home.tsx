@@ -23,6 +23,20 @@ export interface EpisodeProps {
     updatedAt: string;
     url: string;
   };
+  anime: {
+    id: number;
+    name: string;
+    createdAt: string;
+    updatedAt: string;
+    debutDate: string;
+    description: string;
+  };
+  season: {
+    id: number;
+    name: string;
+    createdAt: string;
+    updatedAt: string;
+  };
 }
 
 const Home: React.FC = () => {

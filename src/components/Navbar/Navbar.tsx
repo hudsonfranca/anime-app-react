@@ -47,8 +47,12 @@ const Navbar: React.FC = () => {
 
         <li>animes</li>
         <li>Genres</li>
-        <li>My list</li>
-        <li>History</li>
+        <Link to="/my-list">
+          <li>My list</li>
+        </Link>
+        <li>
+          <Link to="/history">History</Link>
+        </li>
       </Menu>
 
       <InpuContainer data-test="search-input">

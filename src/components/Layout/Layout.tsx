@@ -9,6 +9,7 @@ import { Footer } from '../Footer';
 import { Sidebar } from '../Sidebar';
 import { SideDrawer } from '../SideDrawer';
 import { SearchSideDrawer } from '../SearchSideDrawer';
+
 import SideDrawerProvider from '../context/SideDrawerContext';
 import SearchSideDrawerProvider from '../context/SearchSideDrawerContext';
 import LoginContextProvider from '../../pages/context/LoginContext';

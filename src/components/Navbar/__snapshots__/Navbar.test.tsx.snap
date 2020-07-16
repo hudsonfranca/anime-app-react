@@ -448,7 +448,12 @@ exports[`<Navbar/> redering Should render without errors 1`] = `
       My list
     </li>
     <li>
-      History
+      <a
+        href="/history"
+        onClick={[Function]}
+      >
+        History
+      </a>
     </li>
   </ul>
   <div
